@@ -1,0 +1,20 @@
+.logo {
+    width: 250px;
+    height: 40px;
+    transition-duration: 0.5s;
+    transition-property: opacity;
+    display: block;
+    padding: 10px 0;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo:hover,
+.logo:focus,
+.logo:focus-within {
+    opacity: 0.6;
+}
