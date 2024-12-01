@@ -5,6 +5,7 @@ import LeftPanel from "./Layouts/LeftPanel/LeftPanel"
 import Body from "./Layouts/Body/Body"
 import JournalForm from "./components/JournalForm/JournalForm"
 import { useState } from "react"
+import { useEffect } from "react"
 
 // const data = [
 //   {
@@ -25,6 +26,23 @@ import { useState } from "react"
 function App() {
 
   const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem('data'));
+    if (data) {
+      setItems(data.map(item => ({
+        ...item,
+        date: new Date(item.date)
+      })))
+    }
+  }, [])
+
+  useEffect(() => {
+    if (items.length) {
+      console.log('запись');
+      localStorage.setItem('data', JSON.stringify(items))
+    }
+  }, [items])
 
   const addItems = item => {
     setItems(oldItems => [...oldItems, {

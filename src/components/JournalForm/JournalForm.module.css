@@ -1,0 +1,94 @@
+.journal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.form-head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.form-head label {
+    width: 100%;
+}
+
+.form-head button {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.input-title {
+     color: #fff;
+    outline: none;
+    width: 100%;
+    border: none;
+    background: none;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-family: 'Source Sans 3', sans-serif;
+
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 150px;
+}
+
+@media (max-width: 480px) { 
+    .form-label {
+        min-width: auto;
+        gap: 10px;
+    }
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 480px) { 
+    .form-row {
+        min-width: auto;
+        gap: 10px;
+    }
+}
+
+.input {
+    resize: none;
+    color: #fff;
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-family:'Source Sans 3', serif;
+    border-bottom: 1px solid #323232;
+    width: 100%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+                display: none;
+                -webkit-appearance: none;
+            }
+
+
+            
+.invalid {
+    border: 1px solid red;
+    background-color: rgb(120, 64, 64);
+}
+
