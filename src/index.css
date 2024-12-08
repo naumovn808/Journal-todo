@@ -37,3 +37,32 @@ body {
   padding: 20px;
  }
 }
+
+select {
+  color: #fff;
+  appearance: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+select:hover{
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+select:focus{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+select option {
+  appearance: none;
+  background: #181818;
+  outline: none;
+  border: none;
+}
